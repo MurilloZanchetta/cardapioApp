@@ -1,0 +1,7 @@
+{
+  "name": "cardapioApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
