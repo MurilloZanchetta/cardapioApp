@@ -11,6 +11,34 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'lanches',
+    loadChildren: () => import('./lanches/lanches.module').then( m => m.LanchesPageModule)
+  },
+  {
+    path: 'entradas',
+    loadChildren: () => import('./entradas/entradas.module').then( m => m.EntradasPageModule)
+  },
+  {
+    path: 'sobremesas',
+    loadChildren: () => import('./sobremesas/sobremesas.module').then( m => m.SobremesasPageModule)
+  },
+  {
+    path: 'bebidas',
+    loadChildren: () => import('./bebidas/bebidas.module').then( m => m.BebidasPageModule)
+  },
+  {
+    path: 'detalhes',
+    loadChildren: () => import('./detalhes/detalhes.module').then( m => m.DetalhesPageModule)
+  },
+  {
+    path: 'pratos',
+    loadChildren: () => import('./pratos/pratos.module').then( m => m.PratosPageModule)
+  },
+  {
+    path: 'bebidas-nao-alcoolicas',
+    loadChildren: () => import('./bebidas-nao-alcoolicas/bebidas-nao-alcoolicas.module').then( m => m.BebidasNaoAlcoolicasPageModule)
+  },
 ];
 
 @NgModule({

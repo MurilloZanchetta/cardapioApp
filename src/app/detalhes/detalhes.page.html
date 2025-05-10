@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="text-center">Detalhes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="detalhes-bg ion-padding">
+  <div class="detalhes-container" *ngIf="item">
+    <img [src]="item.imagem" alt="{{ item.nome }}" class="imagem-detalhe" />
+
+    <div class="conteudo-detalhe">
+      <h2>{{ item.nome }}</h2>
+      <p class="preco">R$ {{ item.valor.toFixed(2) }}</p>
+      <p class="descricao">{{ item.descricao }}</p>
+
+      <ion-button expand="block" color="primary" (click)="adicionarAoPedido()">
+        🛒 Adicionar Pedido
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

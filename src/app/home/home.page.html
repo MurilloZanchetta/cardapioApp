@@ -1,20 +1,80 @@
-<ion-header [translucent]="true">
+<ion-header translucent>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title class="text-center">🍽️ Zanchetta Gourmet</ion-title>
+    <ion-buttons slot="end">
+      <img src="assets/img/logo.png" class="toolbar-logo" />
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [scrollEvents]="true" class="home-bg ion-padding" fullscreen="true">
+  <div class="home-wrapper ion-padding">
+    
+    <!-- PRATO DO DIA -->
+    <ion-card class="destaque-card" button (click)="verDetalhes(pratoDoDia)">
+      <img src="assets/img/prato-do-dia.jpg" alt="Prato do Dia" />
+      <ion-card-header>
+        <ion-card-title>🍽️ Prato do Dia</ion-card-title>
+        <ion-card-subtitle>Arroz, Feijão, Bife Acebolado e Batata Frita</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        Uma refeição completa e caseira com arroz soltinho, feijão fresquinho, bife suculento coberto com cebola, batata frita crocante e salada leve. Sabor e tradição por apenas <strong>R$ 29,90</strong>!
+      </ion-card-content>
+    </ion-card>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <!-- CATEGORIAS -->
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-card button (click)="abrirCategoria('lanches')">
+            <img src="assets/img/lanches.png" />
+            <ion-card-content class="text-center">🍔 Lanches</ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-card button (click)="abrirCategoria('entradas')">
+            <img src="assets/img/entrada.jpg" />
+            <ion-card-content class="text-center">🥗 Entradas</ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-card button (click)="abrirCategoria('pratos')">
+            <img src="assets/img/prato.png" />
+            <ion-card-content class="text-center">🍛 Pratos</ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-card button (click)="abrirCategoria('sobremesas')">
+            <img src="assets/img/sobremesa.jpg" />
+            <ion-card-content class="text-center">🍰 Sobremesas</ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-card button (click)="abrirCategoria('bebidas')">
+            <img src="assets/img/bebidas.png" />
+            <ion-card-content class="text-center">🍹 Bebidas</ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-card button (click)="abrirCategoria('bebidas-nao-alcoolicas')">
+            <img src="assets/img/suco.png" />
+            <ion-card-content class="text-center">🧃 Bebidas não Alcoólicas</ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
+
+
+
+
+
+
+
+
 </ion-content>

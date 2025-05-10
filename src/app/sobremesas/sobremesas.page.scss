@@ -1,0 +1,21 @@
+.sobremesas-bg {
+  --background: linear-gradient(to bottom right, #fff8f0, #ffe6f2);
+}
+
+ion-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+ion-card-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+ion-card-subtitle {
+  font-size: 14px;
+  color: #666;
+}
