@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'bebidas-nao-alcoolicas',
     loadChildren: () => import('./bebidas-nao-alcoolicas/bebidas-nao-alcoolicas.module').then( m => m.BebidasNaoAlcoolicasPageModule)
   },
+  {
+    path: 'pedido',
+    loadChildren: () => import('./pedido/pedido.module').then( m => m.PedidoPageModule)
+  },
 ];
 
 @NgModule({

@@ -24,4 +24,9 @@ export class HomePage {
   verDetalhes(item: any) {
     this.router.navigate(['/detalhes'], { state: { item } });
   }
+
+  abrirPedido() {
+    this.router.navigate(['/pedido']);
+  }
+
 }
